@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Lebato Cosmetics & Footwear</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Lebato Cosmetics & Footwear</h1>
+    </div>
+  </header>
+
+  <section class="checkout">
+    <div class="checkout__container">
+      <h2>Checkout</h2>
+      <form class="checkout__form">
+        <!-- Customer Information -->
+        <div class="form-section">
+          <h3>Customer Information</h3>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" required>
+        </div>
+
+        <!-- Shipping Address -->
+        <div class="form-section">
+          <h3>Shipping Address</h3>
+          <label for="address">Street Address</label>
+          <input type="text" id="address" required>
+
+          <label for="city">City</label>
+          <input type="text" id="city" required>
+
+          <label for="zip">Postal Code</label>
+          <input type="text" id="zip" required>
+
+          <label for="country">Country</label>
+          <input type="text" id="country" required>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="form-section">
+          <h3>Payment Method</h3>
+          
+          <label>
+            <input type="radio" name="payment" value="mpesa">
+            M-Pesa 
+          </label>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="form-section summary">
+          <h3>Order Summary</h3>
+          <p>Subtotal: <span></span></p>
+          <p>Shipping: <span></span></p>
+          <p><strong>Total: <span></span></strong></p>
+        </div>
+
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>&copy; 2026 Lebato Cosmetics & Footwear. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

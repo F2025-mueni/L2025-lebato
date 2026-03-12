@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Lebato Cosmetics & Footwear</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Lebato Cosmetics & Footwear</h1>
+    </div>
+  </header>
+
+  <section class="cart">
+    <div class="cart__container">
+      <h2>Your Shopping Cart</h2>
+
+      <table class="cart__table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price (Ksh)</th>
+            <th>Quantity</th>
+            <th>Total (Ksh)</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body">
+          <!-- Items will be injected here by JS -->
+        </tbody>
+      </table>
+
+      <div class="cart__summary">
+        <h3>Cart Summary</h3>
+        <p>Subtotal: <span id="subtotal">Ksh 0.00</span></p>
+        <p>Shipping: <span id="shipping">Ksh 0.00</span></p>
+        <p><strong>Total: <span id="total">Ksh 0.00</span></strong></p>
+
+        <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>&copy; 2026 Lebato Cosmetics & Footwear. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

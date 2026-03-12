@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leberto Admin - Manage Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 style="text-align:center;">Leberto Admin Panel</h1>
+
+  <!-- Login Form -->
+  <div id="login-section">
+    <h2>Admin Login</h2>
+    <input type="email" id="admin-email" placeholder="Email"><br><br>
+    <input type="password" id="admin-password" placeholder="Password"><br><br>
+    <button id="login-btn">Login</button>
+    <p id="login-status"></p>
+  </div>
+
+  <!-- Add Product Form & Product List -->
+  <div id="product-form-section" style="display:none;">
+    <h2>Add New Product</h2>
+    <input type="text" id="name" placeholder="Product Name"><br><br>
+    <input type="text" id="desc" placeholder="Description"><br><br>
+    <input type="number" id="price" placeholder="Price"><br><br>
+    <input type="text" id="image" placeholder="Image URL"><br><br>
+    <button id="add-product-btn">Add Product</button>
+    <p id="status"></p>
+
+    <h2>All Products</h2>
+    <ul id="products-list"></ul> <!-- Products displayed here with delete buttons -->
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="admin.js"></script>
+
+</body>
+</html>
