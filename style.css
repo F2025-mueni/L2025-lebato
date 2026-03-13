@@ -422,34 +422,40 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   padding: 20px;
 }
 
+/* Product Card */
 .product-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 100%;
-    max-width: 220px;
+  max-width: 320px; /* desktop/tablet max width */
   padding: 15px;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
+  height: auto;       /* keep image proportional */
+  max-height: 180px;  /* limit height so it fits nicely */
+  object-fit: contain; /* prevents cropping */
   border-radius: 5px;
 }
 
+/* Product Button */
 .product-card button {
   background-color: #2d2d2d;
   color: #fff;
   border: none;
-  padding: 8px 15px;
-  margin-top: 10px;
+  padding: 10px 18px;
+  margin-top: 12px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -468,6 +474,8 @@ h1, h2 {
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+/* Checkout Button */
 .checkout-btn {
   display: inline-block;
   background: #ff8177;
@@ -484,6 +492,7 @@ h1, h2 {
   background: #e76b63;
 }
 
+/* Cart Item */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -493,7 +502,7 @@ h1, h2 {
 
 .cart-item button {
   margin-left: 5px;
-  background-color: #8177;
+  background-color: #2d2d2d;
   color: #fff;
   border: none;
   padding: 3px 7px;
@@ -538,20 +547,20 @@ h1, h2 {
   text-align: center;
   font-weight: bold;
 }
-/* --- Existing styles above remain the same --- */
 
-/* Tablet (768px – 1024px) */
+/* ========================= */
+/* Tablet Screens */
+/* ========================= */
+
 @media screen and (max-width: 1024px) {
+
   .product-list {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
   }
 
   .product-card {
-    width: 100%;
-      max-width: 220px;
+    max-width: 300px;
   }
 
   .navbar__menu {
@@ -560,7 +569,7 @@ h1, h2 {
     position: absolute;
     top: 60px;
     right: 20px;
-    display: none; /* Can add toggle later for hamburger */
+    display: none;
     padding: 10px;
     border-radius: 5px;
   }
@@ -575,15 +584,24 @@ h1, h2 {
   }
 }
 
-/* Mobile (up to 767px) */
+/* ========================= */
+/* Mobile Screens */
+/* ========================= */
+
 @media screen and (max-width: 767px) {
+
   .product-list {
     flex-direction: column;
     align-items: center;
   }
 
-  .product-card {
-    width: 90%;
+ .product-card {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .product-card img {
+    max-height: 180px; /* same as desktop but proportional */
   }
 
   .cart-section {
