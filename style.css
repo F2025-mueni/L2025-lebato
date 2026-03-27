@@ -82,8 +82,9 @@
     margin-top: 1rem;
 }
 
-.button {
-    display: flex;
+.button,
+.main__btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -96,8 +97,10 @@
     transition: 0.3s ease;
 }
 
-.button:hover {
+.button:hover,
+.main__btn:hover {
     background: #4837ff;
+    color: white;
 }
 
 /* Mobile Styles */
