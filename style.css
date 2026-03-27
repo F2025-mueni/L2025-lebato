@@ -790,38 +790,7 @@ h1, h2 {
   transition: 0.3s;
 }
 
-/* Input Fields and Buttons for Admin */
-#product-form-section input,
-#login-section input {
-  width: 250px;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
 
-#product-form-section button,
-#login-section button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #2d2d2d;
-  color: #fff;
-  cursor: pointer;
-}
-
-#product-form-section button:hover,
-#login-section button:hover {
-  background-color: #ffd700;
-  color: #000;
-}
-
-/* Status Messages */
-#status, #login-status {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
-}
 
 /* ========================= */
 /* Tablet Screens */
@@ -853,10 +822,7 @@ h1, h2 {
     margin: 10px 0;
   }
 
-  #product-form-section input,
-  #login-section input {
-    width: 200px;
-  }
+ 
 }
 
 /* ========================= */
@@ -893,10 +859,6 @@ h1, h2 {
   .checkout-btn {
     width: 100%;
     padding: 12px;
-  }
-  #product-form-section input,
-  #login-section input {
-    width: 90%;
   }
 
   .navbar__menu {
