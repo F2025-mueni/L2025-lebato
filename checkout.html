@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout - Lebato Cosmetics & Footwear</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -18,42 +17,44 @@
   <section class="checkout">
     <div class="checkout__container">
       <h2>Checkout</h2>
-      <form class="checkout__form">
+   <form id="contactForm" action="https://formspree.io/f/mvzwlkqw" method="POST">
+        <!-- Hidden field to identify page -->
+        <input type="hidden" name="page" value="Checkout">
+
         <!-- Customer Information -->
         <div class="form-section">
           <h3>Customer Information</h3>
           <label for="name">Full Name</label>
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="name" required>
 
           <label for="email">Email</label>
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="email" required>
 
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" required>
+          <input type="tel" id="phone" name="phone" required>
         </div>
 
         <!-- Shipping Address -->
         <div class="form-section">
           <h3>Shipping Address</h3>
           <label for="address">Street Address</label>
-          <input type="text" id="address" required>
+          <input type="text" id="address" name="address" required>
 
           <label for="city">City</label>
-          <input type="text" id="city" required>
+          <input type="text" id="city" name="city" required>
 
           <label for="zip">Postal Code</label>
-          <input type="text" id="zip" required>
+          <input type="text" id="zip" name="zip" required>
 
           <label for="country">Country</label>
-          <input type="text" id="country" required>
+          <input type="text" id="country" name="country" required>
         </div>
 
         <!-- Payment Method -->
         <div class="form-section">
           <h3>Payment Method</h3>
-          
           <label>
-            <input type="radio" name="payment" value="mpesa">
+            <input type="radio" name="payment" value="mpesa" required>
             M-Pesa 
           </label>
         </div>
@@ -67,6 +68,9 @@
         </div>
 
         <button type="submit" class="place-order-btn">Place Order</button>
+        <p class="success-message" id="successMessage" style="display:none;">
+          Thank you! Your order has been received. We’ll contact you soon.
+        </p>
       </form>
     </div>
   </section>
@@ -76,5 +80,9 @@
       <p>&copy; 2026 Lebato Cosmetics & Footwear. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Link to external JS -->
+  <script src="checkout.js"></script>
 </body>
 </html>
+
