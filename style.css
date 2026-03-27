@@ -369,7 +369,275 @@
     font-size: 12px;
   }
 }
+/* ========================= */
+/* RESET */
+/* ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
+/* ========================= */
+/* BODY */
+/* ========================= */
+body {
+  background: #f4f6f9;
+  padding: 20px;
+}
+
+/* ========================= */
+/* TITLE */
+/* ========================= */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+#login-section,
+#product-form-section {
+  width: 100%;
+  max-width: 420px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ========================= */
+/* HEADINGS */
+/* ========================= */
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+/* ========================= */
+/* INPUTS */
+/* ========================= */
+#login-section input,
+#product-form-section input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+#login-section button,
+#product-form-section button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#login-section button:hover,
+#product-form-section button:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+
+/* ========================= */
+/* STATUS TEXT */
+/* ========================= */
+#status,
+#login-status {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* PRODUCT LIST */
+/* ========================= */
+#products-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+/* PRODUCT CARD */
+#products-list li {
+  background: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* PRODUCT INFO */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+/* IMAGE */
+.product-info img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TEXT */
+.product-text {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.product-text strong {
+  font-size: 1rem;
+}
+
+.product-text span {
+  font-size: 0.9rem;
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background: #2d2d2d;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: red;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE 📱 */
+/* ========================= */
+@media screen and (max-width: 767px) {
+
+  body {
+    padding: 10px;
+  }
+
+  #login-section,
+  #product-form-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  /* STACK PRODUCT CARD */
+  #products-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-info {
+    width: 100%;
+  }
+
+  .delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* ========================= */
+/* SMALL MOBILE (≤ 480px) 📱 */
+/* ========================= */
+@media screen and (max-width: 480px) {
+
+  body {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  /* Sections tighter */
+  #login-section,
+  #product-form-section {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  /* Inputs */
+  #login-section input,
+  #product-form-section input {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* Buttons */
+  #login-section button,
+  #product-form-section button {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* Product card stack */
+  #products-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  /* Image smaller */
+  .product-info img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Text smaller */
+  .product-text strong {
+    font-size: 0.95rem;
+  }
+
+  .product-text span {
+    font-size: 0.85rem;
+  }
+
+  /* Button full width */
+  .delete-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
