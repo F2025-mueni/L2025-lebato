@@ -798,67 +798,24 @@ h1, h2 {
 
 
 /* ========================= */
-/* Tablet Screens */
-/* ========================= */
-/* Tablet and Mobile Screens */
-/* ========================= */
-@media screen and (max-width: 1024px) {
-
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-
-  .product-card {
-    width: 48%;           /* Two cards per row with small gap */
-    max-width: 48%;
-    margin: 1%;
-    box-sizing: border-box;
-    padding: 15px;
-  }
-
-  .navbar__menu {
-    flex-direction: column;
-    background-color: #2d2d2d;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    display: none;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  .navbar__item {
-    margin: 10px 0;
-  }
-}
-
-/* ========================= */
-/* Mobile Screens (<768px) */
+/* Tablet / Small Screens (<767px) */
 /* ========================= */
 @media screen and (max-width: 767px) {
-
- .product-list {
+  .product-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    gap: 8px;         /* smaller gap for better full width */
+    gap: 8px;                              /* smaller gap */
     width: 100%;
     margin: 0;
-    padding: 8px;     /* small padding around grid */
+    padding: 8px;
     box-sizing: border-box;
   }
 
   .product-card {
-    width: 100%;      /* fill the column completely */
+    width: 100%;      /* fill the column */
     max-width: 100%;
-    padding: 10px;    /* internal padding */
-    margin: 0;        /* remove default margins */
+    padding: 10px;
+    margin: 0;
     box-sizing: border-box;
   }
 
@@ -893,12 +850,24 @@ h1, h2 {
 /* Extra Small Screens (<480px) */
 /* ========================= */
 @media screen and (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .product-card {
+    padding: 8px;
+  }
+
   .about__container {
     padding: 15px;
   }
+
   .about__container h2 {
     font-size: 1.4rem;
   }
+
   .about__section p {
     font-size: 14px;
   }
