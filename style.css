@@ -798,24 +798,67 @@ h1, h2 {
 
 
 /* ========================= */
-/* Tablet / Small Screens (<767px) */
+/* Tablet Screens */
 /* ========================= */
-@media screen and (max-width: 767px) {
+/* Tablet and Mobile Screens */
+/* ========================= */
+@media screen and (max-width: 1024px) {
+
   .product-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    gap: 8px;                              /* smaller gap */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
+    max-width: 100%;
     margin: 0;
-    padding: 8px;
+    padding: 10px;
     box-sizing: border-box;
   }
 
   .product-card {
-    width: 100%;      /* fill the column */
+    width: 48%;           /* Two cards per row with small gap */
+    max-width: 48%;
+    margin: 1%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    background-color: #2d2d2d;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .navbar__item {
+    margin: 10px 0;
+  }
+}
+
+/* ========================= */
+/* Mobile Screens (<768px) */
+/* ========================= */
+@media screen and (max-width: 767px) {
+
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .product-card {
+    width: 100%;        /* Fill the column */
     max-width: 100%;
     padding: 10px;
-    margin: 0;
     box-sizing: border-box;
   }
 
@@ -850,24 +893,12 @@ h1, h2 {
 /* Extra Small Screens (<480px) */
 /* ========================= */
 @media screen and (max-width: 480px) {
-  .product-list {
-    grid-template-columns: 1fr; /* One card per row */
-    gap: 6px;
-    padding: 6px;
-  }
-
-  .product-card {
-    padding: 8px;
-  }
-
   .about__container {
     padding: 15px;
   }
-
   .about__container h2 {
     font-size: 1.4rem;
   }
-
   .about__section p {
     font-size: 14px;
   }
@@ -1467,6 +1498,8 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+
 
 
 
