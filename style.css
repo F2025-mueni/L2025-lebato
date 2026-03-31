@@ -873,6 +873,38 @@ h1, h2 {
     position: static;
   }
 }
+/* MOBILE FULL-SCREEN PRODUCT CARD */
+@media screen and (max-width: 480px) {
+  .product-list {
+    flex-direction: column;   /* stack cards vertically */
+    gap: 0;                   /* optional: no gap for full screen look */
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-card {
+    width: 100vw;             /* full viewport width */
+    max-width: 100vw;         /* remove previous max-width */
+    border-radius: 0;         /* optional: flush with screen edges */
+    padding: 0;               /* optional: remove padding for full image */
+    margin: 0;                /* remove margin */
+  }
+
+  .product-card img {
+    width: 100%;              /* image fills card width */
+    height: auto;             /* keep aspect ratio */
+    max-height: none;         /* remove max-height restriction */
+    object-fit: cover;        /* fill card area nicely */
+    border-radius: 0;         /* match card edges */
+  }
+
+  .product-text,
+  .product-card button {
+    width: 100%;              /* text and buttons fill width */
+    text-align: center;       /* center-align content */
+    padding: 10px 0;          /* optional spacing */
+  }
+}
 header{
     background: #141414;
 }
