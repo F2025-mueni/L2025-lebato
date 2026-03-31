@@ -12,11 +12,3 @@ window.addEventListener('load', () => {
   menu.classList.remove('is-active');
   menuLinks.classList.remove('active');
 });
-const menuLinks = document.querySelector('.navbar__menu');
-
-menuLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('is-active');
-    menuLinks.classList.remove('active');
-  });
-});
