@@ -860,6 +860,7 @@ h1, h2 {
     padding: 10px;    /* internal padding */
     margin: 0;        /* remove default margins */
     box-sizing: border-box;
+  }
 
   .product-card img {
     width: 100%;
