@@ -802,25 +802,17 @@ h1, h2 {
 /* ========================= */
 /* Tablet and Mobile Screens */
 /* ========================= */
+i want the product cards to betwo on screen occupying the wole screen but with this my code they look small in mobile phone /* ========================= */
+
 @media screen and (max-width: 1024px) {
 
   .product-list {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
   }
 
   .product-card {
-    width: 48%;           /* Two cards per row with small gap */
-    max-width: 48%;
-    margin: 1%;
-    box-sizing: border-box;
-    padding: 15px;
+    max-width: 300px;
   }
 
   .navbar__menu {
@@ -839,35 +831,29 @@ h1, h2 {
   }
 }
 
+ 
+
 /* ========================= */
-/* Mobile Screens (<768px) */
+/* Mobile Screens */
 /* ========================= */
+
 @media screen and (max-width: 767px) {
 
   .product-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    gap: 10px;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .product-card {
-    width: 100%;        /* Fill the column */
-    max-width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+ .product-card {
+    max-width: 95%;
+    padding: 15px;
   }
 
   .product-card img {
-    width: 100%;
-    height: auto;
+    max-height: 180px; /* same as desktop but proportional */
   }
 
-  .cart__table th,
+    .cart__table th,
   .cart__table td {
     padding: 10px;
     font-size: 0.9rem;
@@ -882,16 +868,141 @@ h1, h2 {
     width: 100%;
     padding: 12px;
   }
+ 
 
   .navbar__menu {
     flex-direction: column;
     position: static;
   }
 }
+header{
+    background: #141414;
+}
+header h1{
+    color: #ff8177;
+}
+.about {
+  background: #141414;
+  padding: 60px 20px;
+}
 
-/* ========================= */
-/* Extra Small Screens (<480px) */
-/* ========================= */
+.about__container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.about__container h2 {
+  text-align: center;
+  color: #ff8177;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about__section {
+  margin-bottom: 30px;
+}
+
+.about__section h3 {
+  color: #ff8177;
+  margin-bottom: 10px;
+}
+
+.about__section p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about__section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about__section ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.about__section ul li::before {
+  content: "•";
+  color: #ff8177;
+  position: absolute;
+  left: 0;
+}
+
+.founder {
+  background: #f3f3ff;
+  padding: 20px;
+  border-left: 4px solid #ff8177;
+  border-radius: 6px;
+}
+.footer__section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__section ul li {
+  margin-bottom: 10px;
+}
+
+.footer__section ul li a {
+  color: #fff;              /* text is white */
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;            /* align icon + text neatly */
+  align-items: center;
+}
+
+.footer__section ul li a i {
+  color: #fff;              /* icon is white */
+  margin-right: 8px;        /* space between icon and text */
+  font-size: 18px;          /* slightly larger than text */
+}
+
+.footer__section ul li a:hover {
+  color: orange;            /* text turns orange on hover */
+}
+
+.footer__section ul li a:hover i {
+  color: orange;            /* icon also turns orange on hover */
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about__container {
+    padding: 20px;
+  }
+  .about__container h2 {
+    font-size: 1.6rem;
+  }
+   .footer__container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 4 */
+    gap: 20px;                             /* smaller gap */
+    padding: 0 15px;                       /* tighter side padding */
+  }
+
+  .footer__section h3 {
+    font-size: 16px;                       /* slightly smaller headings */
+  }
+
+  .footer__section p,
+  .footer__section a {
+    font-size: 13px;                       /* adjust text size */
+  }
+
+  .footer__bottom {
+    font-size: 13px;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .about__container {
     padding: 15px;
@@ -902,25 +1013,24 @@ h1, h2 {
   .about__section p {
     font-size: 14px;
   }
-
-  .footer__container {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 0 10px;
+   .footer__container {
+    grid-template-columns: 1fr;   /* stack into one column */
+    gap: 15px;                    /* smaller gap between sections */
+    padding: 0 10px;              /* tighter side padding */
   }
 
   .footer__section {
-    text-align: center;
+    text-align: center;           /* center-align content for mobile */
   }
 
   .footer__section h3 {
-    font-size: 15px;
+    font-size: 15px;              /* slightly smaller headings */
     margin-bottom: 10px;
   }
 
   .footer__section p,
   .footer__section a {
-    font-size: 12px;
+    font-size: 12px;              /* smaller text for readability */
   }
 
   .footer__section ul {
@@ -937,6 +1047,8 @@ h1, h2 {
     padding-top: 8px;
   }
 }
+
+
 /* ===== Global Reset ===== */
 * {
   margin: 0;
